@@ -73,7 +73,10 @@ public class EmailService {
 
         StringBuilder prompt = new StringBuilder();
         prompt.append("Generate an email response for the following email content. Don't generate the subject. ");
-        if(request.getEmailTone() != null && !request.getEmailTone().isEmpty()){
+        if(request.getEmailTone() == null || request.getEmailTone().isEmpty()){
+            prompt.append("Use a professional tone");
+        }
+        else if(request.getEmailTone() != null && !request.getEmailTone().isEmpty()){
             prompt.append("Use a ").append(request.getEmailTone()).append(" tone.");
         }
         prompt.append("\n Original email is : \n").append(request.getEmailContent());

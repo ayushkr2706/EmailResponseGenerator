@@ -3,7 +3,6 @@ package com.ayush.EmailResponseGenerator.controller;
 import com.ayush.EmailResponseGenerator.DTO.EmailRequest;
 import com.ayush.EmailResponseGenerator.service.EmailService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
